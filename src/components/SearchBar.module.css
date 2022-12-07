@@ -1,0 +1,27 @@
+.botonS{
+    background-color: #2ecc71;
+    border: #7bed9f;
+    border-radius: 5px;
+    padding: 0.4em;
+    margin-left: 1.3em;
+    font-weight: bold;
+}
+
+.botonS:hover{
+    background-color: #27ae60;
+}
+
+.inputS{
+    background-color: #20bf6b;
+    border: #05c46b;
+    padding: 0.4em;
+    border-radius: 5px;
+}
+
+.inputS:focus{
+    background-color: #26de81;
+}
+
+.inputS:hover{
+    background-color: #26de81;
+}

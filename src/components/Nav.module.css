@@ -1,0 +1,39 @@
+.navR{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+}
+
+.rickandmorty{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    max-width: 10em;
+}
+
+.botonS{
+    background-color: #2ecc71;
+    border: #7bed9f;
+    border-radius: 5px;
+    padding: 0.4em;
+    margin-left: 2em;
+    font-weight: bold;
+}
+.botonS span{
+    display: none;
+    transition: opacity 1s ease-out;
+}
+
+.botonS:hover{
+    background-color: #27ae60;
+}
+
+.botonS:hover span{
+    display: inline;
+    transition: all 2s linear;
+    
+}
+
+.bOculto{
+    display: none;
+}

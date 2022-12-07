@@ -1,0 +1,14 @@
+body {
+   text-align: center;
+   background-color: black;
+   color: white;
+   background: url(./633270.png);
+   background-repeat: repeat;
+   background-size: cover;
+}
+
+.Cards{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}

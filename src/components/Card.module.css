@@ -1,0 +1,73 @@
+.divCarta{
+    background-image: linear-gradient(to bottom, #342E2A, #425C76);
+    max-width: max-content;
+    padding: 1em;
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    margin: 0.5em;
+    flex: 1 1 100px;
+    border-radius: 1em;
+}
+
+.botonCerrar{
+    max-width: max-content;
+    padding: 0.3em 1em;
+    background-color: #ff5252;
+    color: white;
+    border: solid 0px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    transition-duration: 0.3s;
+}
+
+.botonCerrar:hover{
+    background-color: #b33939;
+}
+
+.botonFav{
+    max-width: max-content;
+    padding: 0.3em 1em;
+    background-color: #ff5252;
+    color: white;
+    border: solid 0px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    transition-duration: 0.3s;
+}
+
+.botonFav:hover{
+    background-color: #b33939;
+}
+
+.imagenPJ{
+    margin-top: 0.5em;
+}
+
+.namePJ{
+    position: absolute;
+    text-align: center;
+    text-decoration: underline;
+    padding: 3px;
+    top: 0.4em;
+    left: 0.8em;
+    background-color: rgba(52, 46, 42, 0.3);
+}
+
+.namePJ:link, .namePJ:visited, .namePJ:active{
+    text-decoration: none;
+}
+
+.divTexto{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.divTexto h2{
+    text-shadow: -1px 2px #04AA6D;
+}
