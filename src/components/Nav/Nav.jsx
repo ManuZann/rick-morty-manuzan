@@ -12,7 +12,7 @@ export default function Nav(props){
                 <img className={s.rickandmorty} src="https://media.cdn.adultswim.com/uploads/20210428/21428161947-rick-and-morty-logo-png.png" alt="Rick & Morty logo"/>
             </Link>
             <Link to="/about">
-                <button className={s.botonS}><AiOutlineQuestionCircle/><span>About</span></button>
+                <button className={s.botonS}><AiOutlineQuestionCircle className={s.icono}/><span>About</span></button>
             </Link>
             <Link to="/favs">
                 <button className={s.botonS}>Favs</button>

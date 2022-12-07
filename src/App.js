@@ -2,8 +2,8 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation, useNavigate} from "react-router-dom"
 
-import Cards from "./components/Cards.jsx";
-import NavB from "./components/Nav.jsx";
+import Cards from "./components/Cards/Cards.jsx";
+import NavB from "./components/Nav/Nav.jsx";
 import About from "./components/About.jsx";
 import Detail from "./components/Detail.jsx"
 import Form from "./components/Form/Form.jsx"
@@ -59,10 +59,7 @@ function App() {
 
       <Routes>
       <Route path="/" element={<Form login={login}/>}/>
-      <Route path="home"  element={
-        <div className="Cards">
-          <Cards onClose={onClose} characters={characters} />
-        </div>}/>
+      <Route path="home" element={<Cards onClose={onClose} characters={characters}/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/favs" element={<Favorites/>}/>
       <Route path="/detail/:detailId" element={<Detail/>}/>

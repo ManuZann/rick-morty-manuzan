@@ -7,8 +7,3 @@ body {
    background-size: cover;
 }
 
-.Cards{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-}

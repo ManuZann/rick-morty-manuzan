@@ -1,8 +1,9 @@
-import Card from "./Card";
+import Card from "../Card/Card";
+import s from "../Cards/Cards.module.css"
 
 export default function Cards(props) {
   const { characters } = props;
-  return characters.map(pj => (
+  return <div className={s.Cards}>{characters.map(pj => (
     <Card
       key={pj.id}
       name={pj.name}
@@ -12,5 +13,5 @@ export default function Cards(props) {
       id={pj.id}
       onClose={() => props.onClose(pj.id)}
     />
-  ));
+  ))}</div>
 }

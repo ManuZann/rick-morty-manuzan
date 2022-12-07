@@ -5,7 +5,7 @@ import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { CiCircleRemove } from 'react-icons/ci'
 import { connect } from "react-redux";
 import { useState, useEffect } from "react"
-import { AddPj, DeletePj } from "../Redux/actions/actions";
+import { AddPj, DeletePj } from "../../Redux/actions/actions";
 
 // background-image: linear-gradient(to bottom, #342E2A, #425C76);
 // `
