@@ -16,7 +16,10 @@ function rootReducer(state = initialState, {type, payload}){
             return{...state, myFavorites: favSacado, allCharacters: favSacado}
 
         case FILTER:
-            const filtrados = state.allCharacters.filter(pj => pj.gender === payload)
+            let filtrados = state.allCharacters
+            if(payload !== "All"){
+                filtrados = state.allCharacters.filter(pj => pj.gender === payload)
+            }
             return{...state, myFavorites: filtrados}
 
         case ORDER:

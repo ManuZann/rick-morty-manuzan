@@ -1,7 +1,8 @@
 .all{
     margin: 1em 30em;
     background-image: linear-gradient(to bottom, #22C1C3, #FDBB2D);
-    padding: 2em;
+    padding: 1em;
+    border-radius: 5em;
 }
 
 .nombre{

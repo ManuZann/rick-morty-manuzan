@@ -23,10 +23,11 @@ export default function Favorites() {
                     <option value="Descendente">Descendente</option>
                 </select>
                 <select onChange={handleFilter}>
+                    <option value="All" selected>All</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Genderless">Genderless</option>
-                    <option value="unknown">unknown</option>
+                    <option value="unknown">Unknown</option>
                 </select>
             </div>
             <div className={s.Favs}>
