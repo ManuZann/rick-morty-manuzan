@@ -3,3 +3,14 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.volver{
+    bottom: 8px;
+    background-color: #2ecc71;
+    border: #7bed9f;
+    border-radius: 5px;
+    padding: 0.5em 5em;
+    margin-left: 1.3em;
+    margin-top: 3em;
+    font-weight: bold;
+}

@@ -1,20 +1,21 @@
 // import Card from "../Card"
-import { useDispatch } from "react-redux"
-import { connect } from "react-redux"
 import Card from "../Card/Card"
 import { orderCards, filterCards } from "../../Redux/actions/actions"
 import s from "../Favorites/Favorites.module.css"
+import { useDispatch, useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 
-function Favorites({ myFavorites }) {
+export default function Favorites() {
+    const myFavorites = useSelector((state) => state.myFavorites)
     const dispatch = useDispatch()
+
     function handleOrder(e) {
         dispatch(orderCards(e.target.value))
     }
     function handleFilter(e) {
         dispatch(filterCards(e.target.value))
     }
-
-    console.log(myFavorites)
+    
     return <div>
             <div>
                 <select onChange={handleOrder}>
@@ -41,11 +42,6 @@ function Favorites({ myFavorites }) {
                     />
                 ))}
             </div>
+            <Link to="/home"><button className={s.volver}>Volver</button></Link>
     </div>
 }
-
-function mapStateToProps(state) {
-    return { myFavorites: state.myFavorites }
-}
-
-export default connect(mapStateToProps, null)(Favorites)

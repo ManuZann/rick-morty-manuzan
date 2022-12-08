@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import s from "./Detail.module.css"
+import { Link } from "react-router-dom";
 
 export default function Detail() {
     const [ character, setCharacter ] = useState({});
@@ -23,13 +25,18 @@ export default function Detail() {
     }, [detailId]);
 
     return (
-        <div>
-            <h1>Nombre: {character.name}</h1>
-            <h4>Estado: {character.status}</h4>
-            <h4>Especie: {character.species}</h4>
-            <h4>Genero: {character.gender}</h4>
-            <h4>Origen: {character.origin?.name}</h4>
-            <img src={character.image} alt={`Imagen de ${character.name}.`} />
+        <div className={s.all}>
+            <h1 className={s.nombre}>Nombre: {character.name}</h1>
+            <div className={s.datos}>
+                <img src={character.image} alt={`Imagen de ${character.name}.`} />
+                <div className={s.info}>
+                    <h3 className={s.infotext}>Estado: {character.status}</h3>
+                    <h3 className={s.infotext}>Especie: {character.species}</h3>
+                    <h3 className={s.infotext}>Genero: {character.gender}</h3>
+                    <h3 className={s.infotext}>Origen: {character.origin?.name}</h3>
+                </div>
+            </div>
+            <Link to="/home"><button className={s.volver}>Volver</button></Link>
         </div>
     );
 }

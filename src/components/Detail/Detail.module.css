@@ -1,0 +1,34 @@
+.all{
+    margin: 1em 30em;
+    background-image: linear-gradient(to bottom, #22C1C3, #FDBB2D);
+    padding: 2em;
+}
+
+.nombre{
+    text-transform: uppercase;
+	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    gap: 10em;
+    margin-top: 3em;
+    margin-bottom: 5em;
+}
+
+.volver{
+    bottom: 8px;
+    background-color: #2ecc71;
+    border: #7bed9f;
+    border-radius: 5px;
+    padding: 0.5em 5em;
+    margin-left: 1.3em;
+    font-weight: bold;
+}

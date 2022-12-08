@@ -3,38 +3,46 @@ import s from "./Card.module.css"
 import { Link } from "react-router-dom"
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { CiCircleRemove } from 'react-icons/ci'
-import { connect } from "react-redux";
 import { useState, useEffect } from "react"
 import { AddPj, DeletePj } from "../../Redux/actions/actions";
+import { useDispatch, useSelector } from "react-redux"
 
 // background-image: linear-gradient(to bottom, #342E2A, #425C76);
 // `
 
-function Card(props) {
+export default function Card(props) {
+   const dispatch = useDispatch()
+   const myFavorites = useSelector((state) => state.myFavorites)
+   
    const [isFav, setisFav] = useState()
 
    function handleFavorite() {
       if (isFav) {
          setisFav(false)
-         props.DeletePj(props.id)
+         dispatch(DeletePj(props.id))
       } else {
          setisFav(true)
-         props.AddPJ(props)
+         dispatch(AddPj(props))
       }
    }
 
+   function onclose(){
+      props.onClose()
+      handleFavorite()
+   }
+
    useEffect(() => {
-      props.myFavorites.forEach((fav) => {
+      myFavorites.forEach((fav) => {
          if (fav.id === props.id) {
             setisFav(true);
          }
       });
    // eslint-disable-next-line react-hooks/exhaustive-deps
-   }, [props.myFavorites]);
+   }, [myFavorites]);
 
    return (
       <div className={s.divCarta}>
-         <button className={s.botonCerrar} onClick={props.onClose}><CiCircleRemove/></button>
+         <button className={s.botonCerrar} onClick={onclose}><CiCircleRemove/></button>
          {isFav ? 
             (<button className={s.botonFav} onClick={handleFavorite}><AiFillHeart/></button>) : 
             (<button className={s.botonFav} onClick={handleFavorite}><AiOutlineHeart/></button>)}
@@ -49,13 +57,3 @@ function Card(props) {
       </div>
    );
 }
-
-function mapDispatchToProps(dispatch) {
-   return { AddPJ: (personaje) => dispatch(AddPj(personaje)), DeletePj: (id) => dispatch(DeletePj(id)) }
-}
-
-function mapStateToProps(state) {
-   return {myFavorites: state.myFavorites}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Card)

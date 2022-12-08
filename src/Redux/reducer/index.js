@@ -13,7 +13,7 @@ function rootReducer(state = initialState, {type, payload}){
 
         case DELETEPJ:
             const favSacado = state.allCharacters.filter(pj => pj.id !== payload)
-            return{...state, allCharacters: favSacado}
+            return{...state, myFavorites: favSacado, allCharacters: favSacado}
 
         case FILTER:
             const filtrados = state.allCharacters.filter(pj => pj.gender === payload)

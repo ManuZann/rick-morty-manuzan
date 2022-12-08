@@ -22,6 +22,8 @@
 .botonS span{
     display: none;
     transition: opacity 1s ease-out;
+    margin-left: 0.5em;
+    text-align: center;
 }
 
 .botonS:hover{
@@ -36,4 +38,8 @@
 
 .bOculto{
     display: none;
+}
+
+.info{
+    margin: 0 auto;
 }

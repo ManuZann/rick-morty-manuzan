@@ -5,7 +5,7 @@ import { Routes, Route, useLocation, useNavigate} from "react-router-dom"
 import Cards from "./components/Cards/Cards.jsx";
 import NavB from "./components/Nav/Nav.jsx";
 import About from "./components/About.jsx";
-import Detail from "./components/Detail.jsx"
+import Detail from "./components/Detail/Detail.jsx"
 import Form from "./components/Form/Form.jsx"
 import Favorites from "./components/Favorites/Favorites.jsx"
 
